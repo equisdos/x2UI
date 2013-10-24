@@ -1,0 +1,18 @@
+html, body{
+	font-family: "Local_OpenSans";
+	color: #58616A;
+    text-shadow: 0 .05em rgba(255,255,255,0.7);
+	cursor: default;
+	margin:1%;
+	background-image: url('../images/Fondo_01.png');
+}
+
+.Cabecera{
+	text-align:center;
+}
+
+.Selector{
+	position:absolute;
+	top: 2%;
+	right: 2%;
+}

@@ -1,0 +1,529 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*	x2UI v1.0 | GPL 2003 equisdos | www.equisdos.com
+//	Autores:
+//			- Eugenio Lacuesta
+//			- Camilo Pifano
+*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*REFERENCIA DE COLORES:-------------------------------------------------------------------------------------------------------------------------------------*/
+/*
+	Dominant color					:	#27AE60
+	Dominant border					:	#208A4E
+	
+	Complementary color				:	#2ECC71
+	Complementary border			:	#2BBD69
+	
+	Dominant action color			:	#2C3E50
+	Dominant action border			:	#202D39
+	
+	Complementary action color		:	#34495E
+	Complementary action border		:	#293A4B
+	
+	Dominant caution color			:	#E8543F
+	Dominant caution border			:	#C22D18
+	
+	Complementary caution color		:	#EA614D
+	Complementary caution border	:	#E1341C
+	
+	Error color						:	#E74C3C
+*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*FUENTES DE LETRA:------------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face{
+	font-family: Local_OpenSans;
+	src: url('../fonts/OpenSans Regular.ttf');
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*LINEAS PUNTEADAS-------------------------------------------------------------------------------------------------------------------------------------------*/
+hr.x2{
+	border:#B8B3B1 1px dashed;
+	border-style: none none dashed;
+	color:#FFFFFF;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ELEMENTOS PRINCIPALES:-------------------------------------------------------------------------------------------------------------------------------------*/
+label.x2{
+	font-family: "Local_OpenSans";
+	font-size: 13px;
+	color: #58616A;
+    text-shadow: 0 .05em rgba(255,255,255,0.7);
+}
+
+input.x2, textarea.x2 ,select.x2{
+	font-family: "Local_OpenSans";
+	font-size: 13px;
+	color: #666666;
+	background-color: #FFFFFF;
+	/*Quitar borde amarillo Webkit*/
+	outline: none;
+}
+
+fieldset.x2{
+	border-radius: 4px;
+	border:#EBE6E2 1px solid;
+	box-shadow: 0 .05em .05em rgba(255,255,255,0.7);
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*FORMULARIO:------------------------------------------------------------------------------------------------------------------------------------------------*/
+form.x2{
+	padding: 1%;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 0px 0px 12px rgba(255, 255, 255, 0.4);
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*BOTONES:---------------------------------------------------------------------------------------------------------------------------------------------------*/
+input.x2[type="reset"], input.x2[type="button"], input.x2[type="submit"]{
+	background-color: #27AE60;
+	color: #FFFFFF;
+	text-shadow: 0px -1px 1px rgba(19, 28, 0, 0.35);
+	
+	height: 35px;
+    padding: 0 30px 3px 30px;
+	
+	border: 1px solid #208A4E;
+	border-radius: 6px;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+	
+	-webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+input.x2[type="reset"]:hover, input.x2[type="button"]:hover, input.x2[type="submit"]:hover{
+	background-color: #2ECC71;
+	border: 1px solid #2BBD69;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0px 0px 3px 0px #27AE60;
+}
+
+input.x2[type="reset"]:active, input.x2[type="button"]:active, input.x2[type="submit"]:active{
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+input.x2[type="reset"]:disabled, input.x2[type="button"]:disabled, input.x2[type="submit"]:disabled{
+	color:#AAAAAA;
+	background-color: #EBE6E2;
+	border: 1px solid #DBD6D2;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+}
+
+/*Quitar punteado en elementos seleccionados*/
+input.x2[type="reset"]::-moz-focus-inner, input.x2[type="button"]::-moz-focus-inner, input.x2[type="submit"]::-moz-focus-inner, select.x2::-moz-focus-inner{
+	border: none;
+}
+
+/*Action button*/
+input.x2-action[type="reset"], input.x2-action[type="button"], input.x2-action[type="submit"]{
+	background-color: #2C3E50;
+	color: #FFFFFF;
+	text-shadow: 0px -1px 1px rgba(19, 28, 0, 0.35);
+	
+	height: 35px;
+    padding: 0 30px 3px 30px;
+	
+	border: 1px solid #202D39;
+	border-radius: 6px;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+	
+	-webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+input.x2-action[type="reset"]:hover, input.x2-action[type="button"]:hover, input.x2-action[type="submit"]:hover{
+	background-color: #34495E;
+	border: 1px solid #293A4B;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0px 0px 3px 0px #293A4B;
+}
+
+input.x2-action[type="reset"]:active, input.x2-action[type="button"]:active, input.x2-action[type="submit"]:active{
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+input.x2-action[type="reset"]:disabled, input.x2-action[type="button"]:disabled, input.x2-action[type="submit"]:disabled{
+	color:#AAAAAA;
+	background-color: #EBE6E2;
+	border: 1px solid #DBD6D2;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+}
+
+/*Caution button*/
+input.x2-caution[type="reset"], input.x2-caution[type="button"], input.x2-caution[type="submit"]{
+	background-color: #E8543F;
+	color: #FFFFFF;
+	text-shadow: 0px -1px 1px rgba(19, 28, 0, 0.35);
+	
+	height: 35px;
+    padding: 0 30px 3px 30px;
+	
+	border: 1px solid #C22D18;
+	border-radius: 6px;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+	
+	-webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+input.x2-caution[type="reset"]:hover, input.x2-caution[type="button"]:hover, input.x2-caution[type="submit"]:hover{
+	background-color: #EA614D;
+	border: 1px solid #E1341C;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0px 0px 3px 0px #E1341C;
+}
+
+input.x2-caution[type="reset"]:active, input.x2-caution[type="button"]:active, input.x2-caution[type="submit"]:active{
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+input.x2-caution[type="reset"]:disabled, input.x2-caution[type="button"]:disabled, input.x2-caution[type="submit"]:disabled{
+	color:#AAAAAA;
+	background-color: #EBE6E2;
+	border: 1px solid #DBD6D2;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*CUADROS DE TEXTO:------------------------------------------------------------------------------------------------------------------------------------------*/
+input.x2[type="text"], input.x2[type="password"], textarea.x2{
+    font-weight: 400;
+	vertical-align: middle;
+	
+    padding: 6px;
+    margin-bottom: 6px;
+	
+    border: 2.5px solid #DDDDDD;
+    border-radius: 6px;
+	
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+input.x2[type="text"]:hover, input.x2[type="password"]:hover, textarea.x2:hover{	
+	border-color: #BDC3C7;
+}
+
+input.x2[type="text"]:focus, input.x2[type="password"]:focus, textarea.x2:focus{	
+	border-color: #27AE60;
+}
+
+input.x2[readonly], textarea[readonly]{
+	border:dashed 2px #DDDDDD;
+}
+
+input.x2[type="text"]:disabled, input.x2[type="password"]:disabled, textarea.x2:disabled{
+	background-color: #EBE6E2;
+	border-color: #EBE6E2;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*CHECKBOX---------------------------------------------------------------------------------------------------------------------------------------------------*/
+input.x2[type="checkbox"] {
+	display: none;
+}
+
+input.x2[type="checkbox"] + label {
+	margin-left:6px;
+	background-color: #DDDDDD;
+	
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 10px;
+	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+}
+
+input.x2[type="checkbox"]:hover  + label{
+	background-color: #BDC3C7;
+}
+
+input.x2[type="checkbox"] + label:active, input.x2[type="checkbox"]:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input.x2[type="checkbox"]:checked + label {
+	background-color: #27AE60;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99A1A7;
+}
+
+input.x2[type="checkbox"]:checked + label:after {
+	content: '\2714';
+	font-size: 15px;
+	position: absolute;
+	top: -2px;
+	left: 4.5px;
+	color: #FFFFFF;
+}
+
+input.x2[type="checkbox"]:disabled + label {
+	background-color: #EEEEEE;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+}
+
+input.x2[type="checkbox"]:checked:disabled + label:after {
+	content: '\2714';
+	font-size: 15px;
+	position: absolute;
+	top: -2px;
+	left: 4.5px;
+	color: #AAAAAA;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*RADIO BUTTON:----------------------------------------------------------------------------------------------------------------------------------------------*/
+input.x2[type="radio"] {
+	display: none;
+}
+
+input.x2[type="radio"] + label {
+	margin-left:6px;
+	-webkit-appearance: none;
+	background-color: #DDDDDD;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 10px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+
+input.x2[type="radio"]:hover + label {
+	background-color: #BDC3C7;
+}
+
+input.x2[type="radio"]:checked + label:after {
+	content: ' ';
+	width: 10px;
+	height: 10px;
+	border-radius: 50px;
+	position: absolute;
+	top: 5px;
+	background: #FFFFFF;
+	text-shadow: 0px;
+	left: 5px;
+	font-size: 32px;
+}
+
+input.x2[type="radio"]:checked + label {
+	background-color: #27AE60;
+	color: #FFFFFF;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+input.x2[type="radio"] + label:active, input.x2[type="radio"]:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input.x2[type="radio"]:disabled + label {
+	background-color: #EEEEEE;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+}
+
+input.x2[type="radio"]:checked:disabled + label:after {
+	content: ' ';
+	width: 10px;
+	height: 10px;
+	border-radius: 50px;
+	position: absolute;
+	top: 5px;
+	background: #AAAAAA;
+	text-shadow: 0px;
+	left: 5px;
+	font-size: 32px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*INPUT FILE:------------------------------------------------------------------------------------------------------------------------------------------------*/
+.input-file {
+    overflow: hidden;
+    position: relative;
+	width:60px;
+	
+	font-family: "Local_OpenSans";
+	font-size: 13px;
+	text-shadow:none;
+	
+	background-color: #27AE60;
+	color: #FFFFFF;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.15);
+	
+    padding: 6px 30px 8px 30px;
+	
+	border: 1px solid #27AE60;
+	border-radius: 6px;
+	
+	-webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+.input-file input[type="file"]{
+	margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 10000px;
+    border: 10000px solid transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+    cursor: pointer;
+}
+
+.input-file:hover{
+	background-color: #2ECC71;
+	border: 1px solid #2BBD69;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5) inset, 0px 0px 3px 0px #27AE60;
+}
+
+.input-file:active{
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*SELECT:----------------------------------------------------------------------------------------------------------------------------------------------------*/
+select.x2{	
+    font-weight: 400;
+    
+	padding: 6px;
+    margin-bottom: 6px;
+	
+    border: 2.5px solid #DDDDDD;
+    border-radius: 6px;
+	
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+select.x2:hover{	
+	border-color: #BDC3C7;
+}
+
+select.x2:focus{	
+	border-color: #27AE60;
+}
+
+select.x2:disabled{
+	background-color: #EBE6E2;
+	border-color: #EBE6E2;
+}
+
+select.x2:disabled option[selected]{
+	color: #FFFFFF;
+}
+
+select.x2 option:hover{
+	background-color: #EEEEEE;
+}
+
+select.x2 option:focus{
+	background-color: #27AE60;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*MENSAJES DE ERROR DE VALIDATE:-----------------------------------------------------------------------------------------------------------------------------*/
+label.error{
+	font-family: "Local_OpenSans";
+	font-size: 13px;
+	color: #999999;
+    text-shadow: 0 .05em rgba(255,255,255,0.7);
+	font-style: italic;
+}
+
+input.error[type="text"], input.error[type="password"], textarea.error,
+input.error[type="text"]:hover, input.error[type="password"]:hover, textarea.error:hover,
+input.error[type="text"]:focus, input.error[type="password"]:focus, textarea.error:focus{
+	color: #E74C3C;
+	border-color: #E74C3C;
+}
+
+select.error, select.error:hover, select.error:focus{
+	color: #E74C3C;
+	border-color: #E74C3C;
+}
+
+select.error option{
+	color: #666666;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ORIENTACIONES----------------------------------------------------------------------------------------------------------------------------------------------*/
+label.left{
+	display: block;
+	float: left;
+	text-align: left;
+}
+
+label.right{
+	display: block;
+	float: left;
+	text-align: right;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*TAMAÑOS----------------------------------------------------------------------------------------------------------------------------------------------------*/
+label.XS{
+	width: 25pt;
+	margin-right:5pt;
+}
+
+label.S{
+	width: 50pt;
+	margin-right:5pt;
+}
+
+label.M {
+    width: 100pt;
+	margin-right:5pt;
+}
+
+label.L{
+	width: 150pt;
+	margin-right:5pt;
+}
+
+label.XL{
+	width: 200pt;
+	margin-right:5pt;
+}
+
+input.XS, textarea.XS, select.XS{
+	width: 50pt;
+}
+
+input.S, textarea.S, select.S{
+	width: 100pt;
+}
+
+input.M, textarea.M, select.M{
+	width: 200pt;
+}
+
+input.L, textarea.L, select.L{
+	width: 300pt;
+}
+
+input.XL, textarea.XL, select.XL{
+	width: 400pt;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/

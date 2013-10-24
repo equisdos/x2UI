@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<title>x2UI</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):--------------------------------------------------------------------------------------- -->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTO JS (STYLES-SWITCHER):------------------------------------------------------------------------------- -->
+		<script type="text/javascript" src="js/styleswitcher.js"></script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR ARCHIVOS JS Y CSS (DEMO):------------------------------------------------------------------------------------- -->
+		<link rel="stylesheet" href="css/demo.css" type="text/css" />
+		<script type="text/javascript" src="js/demo.js"></script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR ARCHIVOS JS Y CSS (X2UI):------------------------------------------------------------------------------------- -->
+		<script src="js/x2UI.js" type="text/javascript"></script> 
+		
+		<link type="text/css" href="css/x2UI.blue-sky.css" rel="stylesheet" title="x2UI.blue-sky"/>
+		<link type="text/css" href="css/x2UI.emerald.css" rel="stylesheet" title="x2UI.emerald"/>
+		<link type="text/css" href="css/x2UI.plastic-green.css" rel="stylesheet" title="x2UI.plastic-green"/>
+		<link type="text/css" href="css/x2UI.grape.css" rel="stylesheet" title="x2UI.grape"/>
+		<link type="text/css" href="css/x2UI.sunny.css" rel="stylesheet" title="x2UI.sunny"/>
+		<link type="text/css" href="css/x2UI.ruby.css" rel="stylesheet" title="x2UI.ruby"/>
+		<link type="text/css" href="css/x2UI.asphalt.css" rel="stylesheet" title="x2UI.asphalt"/>
+		<link type="text/css" href="css/x2UI.smoke.css" rel="stylesheet" title="x2UI.smoke"/>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+	</head>
+	<body>
+		<select id="IDcmbTemas" class="x2 Selector" >
+			<option value="x2UI.blue-sky" selected>Blue Sky</option>
+			<option value="x2UI.emerald">Emerald</option>
+			<option value="x2UI.plastic-green">Plastic Green</option>
+			<option value="x2UI.grape">Grape</option>
+			<option value="x2UI.sunny">Sunny</option>
+			<option value="x2UI.ruby">Ruby</option>
+			<option value="x2UI.asphalt">Asphalt</option>
+			<option value="x2UI.smoke">Smoke</option>
+		</select>
+		
+		<div class="Cabecera" >
+			<img src="images/Logo.png" />
+			<h1>equisdos UI</h1>
+		</div>	
+		
+		<br/>
+		
+		<form action="index.html" class="x2" method="post">
+			<fieldset class="x2">
+				
+				<br/>
+				
+				<input type="button" name="btnButton" class="x2" value="Button" /><br/><br/>
+				<input type="submit" name="sbtSubmit" class="x2" value="Submit" /><br/><br/>
+				<input type="reset" name="rstReset" class="x2" value="Reset" /><br/><br/>
+				<input type="button" name="btnAction" class="x2-action" value="Action" /><br/><br/>
+				<input type="button" name="btnCaution" class="x2-caution" value="Caution" /><br/><br/>
+				<input type="button" name="btnDisabled" class="x2" disabled="true" value="Disabled" /><br/>
+				
+				<br/><hr class="x2" /><br/>
+				
+				<input type="text" name="txtText" class="x2" placeholder="Name of user" /><br/>
+				<input type="password" name="txtPass" class="x2" placeholder="Password" /><br/>
+				<input type="text" name="txtError" class="x2 error" value="Validate error" /> <label class="error">Validate message</label><br/>
+				<input type="text" name="txtReadonly" class="x2" readonly="true" value="Read only" /><br/>
+				<input type="text" name="txtDisabled" class="x2" disabled="true" value="Disabled" /><br/>
+				
+				<br/><hr class="x2" /><br/>
+				
+				<input type="checkbox" id="IDchkElement01" class="x2" checked="true" /> <label class="x2" >Checkbox 01</label><br/>
+				<input type="checkbox" id="IDchkElement02" class="x2" /> <label class="x2" >Checkbox 02</label><br/>
+				<input type="checkbox" id="IDchkElement03" class="x2" checked="true" disabled="true" /> <label class="x2" >Checkbox 03 (checked & disabled)</label><br/>
+				<input type="checkbox" id="IDchkElement04" class="x2" disabled="true" /> <label class="x2" >Checkbox 04 (disabled)</label>
+				
+				<br/><br/><hr class="x2" /><br/>
+				
+				<input type="radio" id="IDradElement01" name="radRadio" class="x2" checked="true" /> <label class="x2" >Radio button 01</label><br/>
+				<input type="radio" id="IDradElement02" name="radRadio" class="x2" /> <label class="x2" >Radio button 02</label><br/><br/>
+				
+				<input type="radio" id="IDradElement03" name="radRadio02" class="x2" checked="true" disabled="true"/> <label class="x2" >Radio button 03 (checked & disabled)</label><br/>
+				<input type="radio" id="IDradElement04" name="radRadio02" class="x2" disabled="true"/> <label class="x2" >Radio button 04 (disabled)</label>
+				
+				<br/><br/><hr class="x2" /><br/>
+				
+				<input type="file" id="IDfleFile" name="fleFile" class="x2" text="Upload file..." placeholder="Browse" />
+
+				<br/><hr class="x2" /><br/>
+				
+				<select name="cmbCombo" class="x2" >
+					<option value="Option01" selected>First Option</option>
+					<option value="Option02">Second Option</option>
+					<option value="Option03">Third Option</option>
+					<option value="Option04">Quarter Option</option>
+				</select>
+				
+				<br/>
+				
+				<select name="cmbComboError" class="x2 error" >
+					<option value="Option01" selected>First Option</option>
+					<option value="Option02">Second Option</option>
+					<option value="Option03">Third Option</option>
+					<option value="Option04">Quarter Option</option>
+				</select> <label class="error">Validate message</label>
+				
+				<br/>
+				
+				<select name="cmbComboDisabled" class="x2" disabled="true" >
+					<option value="Option01" selected>First Option</option>
+					<option value="Option02">Second Option</option>
+					<option value="Option03">Third Option</option>
+					<option value="Option04">Quarter Option</option>
+				</select>
+				
+				<br/><br/><hr class="x2" /><br/>
+				
+				<select name="lstSimpleList" class="x2" size="6">
+					<option value="Option01" selected>First Option</option>
+					<option value="Option02">Second Option</option>
+					<option value="Option03">Third Option</option>
+					<option value="Option04">Quarter Option</option>
+				</select>
+				
+				<br/><br/>
+				
+				<select name="lstSimpleListError" class="x2 error" size="6">
+					<option value="Option01" selected>First Option</option>
+					<option value="Option02">Second Option</option>
+					<option value="Option03">Third Option</option>
+					<option value="Option04">Quarter Option</option>
+				</select> <label class="error">Validate message</label><br/>
+				
+				<br/>
+				
+				<select name="lstSimpleListDisabled" class="x2" disabled="true" size="6">
+					<option value="Option01" selected>First Option</option>
+					<option value="Option02">Second Option</option>
+					<option value="Option03">Third Option</option>
+					<option value="Option04">Quarter Option</option>
+				</select>
+				
+				<br/><br/><hr class="x2" /><br/>
+				
+				<textarea name="txtaArea" class="x2" rows="6" cols="40" >Default text</textarea><br/>
+				<textarea name="txtaAreaError" class="x2 error" rows="6" cols="40" >Validate error</textarea> <label class="error">Validate message</label><br/>
+				<textarea name="txtaAreaReadonly" class="x2" readonly="true" rows="6" cols="40" >Read only</textarea><br/>
+				<textarea name="txtaAreaDisabled" class="x2" disabled="true" rows="6" cols="40" >Disabled</textarea>
+				
+				<br/><br/><hr class="x2" /><br/>
+				
+				<input type="button" name="btnAppSize" class="x2"  value="View Sizes" onclick="window.location='appSize.html'" />
+				
+				<br/><br/>
+
+			</fieldset>
+		</form>
+	
+	</body>
+</html>
